@@ -54,7 +54,7 @@ def load_celestrak_json(url, filename, max_days=7.0):
         data = read()
         if data:
             return data
-        os.remove(filename)                      # bad cache: delete and download again
+        os.remove(filename)                   
 
     load.download(url, filename=filename)
     data = read()
